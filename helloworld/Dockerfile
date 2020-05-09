@@ -2,12 +2,12 @@ FROM python:3-alpine
 
 USER root
 
-RUN addgroup --gid 1001 developers && \
-    adduser --uid 1001 --gid 1001 sean && \
-    mkdir /apps && \
-    chown sean:developers /apps 
+#RUN addgroup developers && \
+#    adduser --uid 1001 -g developers sean && \
+#    mkdir /apps && \
+#    chown sean:developers /apps
 
-USER 1001
+RUN mkdir /apps
 
 COPY ./index.html /apps
 

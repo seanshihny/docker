@@ -1,0 +1,4 @@
+FROM node:7
+ADD app.js /app.js
+ADD now.js /now.js
+ENTRYPOINT ["node", "app.js"]
